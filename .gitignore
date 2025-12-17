@@ -1,0 +1,13 @@
+# Backend
+backend/target/
+backend/.idea/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.idea/
+
+# System
+.DS_Store
+

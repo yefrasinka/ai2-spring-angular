@@ -1,0 +1,16 @@
+<h2>Dodaj osobę</h2>
+
+<div class="form">
+  <input placeholder="Imię" [(ngModel)]="person.firstName" />
+  <input placeholder="Nazwisko" [(ngModel)]="person.familyName" />
+  <input type="number" placeholder="Wiek" [(ngModel)]="person.age" />
+
+  <input placeholder="Miasto" [(ngModel)]="person.city" />
+  <input placeholder="Ulica" [(ngModel)]="person.street" />
+  <input placeholder="Kod pocztowy" [(ngModel)]="person.postCode" />
+
+  <div class="buttons">
+    <button (click)="save()">Zapisz</button>
+    <a routerLink="/" class="back">← Powrót do listy</a>
+  </div>
+</div>

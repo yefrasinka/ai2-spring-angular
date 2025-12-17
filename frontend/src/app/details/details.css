@@ -1,0 +1,12 @@
+.card {
+  max-width: 400px;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #0066cc;
+}

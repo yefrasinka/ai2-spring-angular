@@ -1,0 +1,13 @@
+<h2>Szczegóły osoby</h2>
+
+<div *ngIf="person" class="card">
+  <p><strong>Imię:</strong> {{ person.firstName }}</p>
+  <p><strong>Nazwisko:</strong> {{ person.familyName }}</p>
+  <p><strong>Wiek:</strong> {{ person.age }}</p>
+
+  <p><strong>Miasto:</strong> {{ person.city }}</p>
+  <p><strong>Ulica:</strong> {{ person.street }}</p>
+  <p><strong>Kod pocztowy:</strong> {{ person.postCode }}</p>
+
+  <a routerLink="/" class="back">← Powrót do listy</a>
+</div>
