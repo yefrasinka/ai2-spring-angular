@@ -1,16 +1,53 @@
-<h2>Dodaj osobę</h2>
+<div class="page-container">
+  <h2>Dodaj osobę</h2>
 
-<div class="form">
-  <input placeholder="Imię" [(ngModel)]="person.firstName" />
-  <input placeholder="Nazwisko" [(ngModel)]="person.familyName" />
-  <input type="number" placeholder="Wiek" [(ngModel)]="person.age" />
+  <mat-card>
+    <mat-card-content>
+      <div class="form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Imię</mat-label>
+          <input matInput [(ngModel)]="person.firstName" />
+        </mat-form-field>
 
-  <input placeholder="Miasto" [(ngModel)]="person.city" />
-  <input placeholder="Ulica" [(ngModel)]="person.street" />
-  <input placeholder="Kod pocztowy" [(ngModel)]="person.postCode" />
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nazwisko</mat-label>
+          <input matInput [(ngModel)]="person.familyName" />
+        </mat-form-field>
 
-  <div class="buttons">
-    <button (click)="save()">Zapisz</button>
-    <a routerLink="/" class="back">← Powrót do listy</a>
-  </div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Wiek</mat-label>
+          <input matInput type="number" [(ngModel)]="person.age" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Miasto</mat-label>
+          <input matInput [(ngModel)]="person.city" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Ulica</mat-label>
+          <input matInput [(ngModel)]="person.street" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Kod pocztowy</mat-label>
+          <input matInput [(ngModel)]="person.postCode" />
+        </mat-form-field>
+
+        <div class="buttons">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="save()"
+          >
+            Zapisz
+          </button>
+
+          <a mat-button routerLink="/">
+            Powrót do listy
+          </a>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

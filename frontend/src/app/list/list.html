@@ -1,18 +1,51 @@
-<h2>Lista osób</h2>
+<div class="page-container">
+  <h2>Lista osób</h2>
 
-<a routerLink="/add" class="add">➕ Dodaj osobę</a>
+  <a
+    mat-raised-button
+    color="primary"
+    routerLink="/add"
+    class="add"
+  >
+    Dodaj osobę
+  </a>
 
-<ul *ngIf="persons.length > 0">
-  @for (person of persons; track person.id) {
-    <li>
-      <span>
-        {{ person.firstName }} {{ person.familyName }}
-      </span>
-      
-      <span class="actions">
-        <a [routerLink]="['/details', person.id]">szczegóły</a>
-        <a href="#" (click)="delete(person.id); $event.preventDefault()">usuń</a>
-      </span>
-    </li>
-  }
-</ul>
+  <!-- LIST -->
+  <div class="list-container" *ngIf="persons.length > 0; else emptyState">
+    <ul class="person-list">
+      @for (person of persons; track person.id) {
+        <li class="person-row">
+          <span class="name">
+            {{ person.firstName }} {{ person.familyName }}
+          </span>
+
+          <span class="actions">
+            <a
+              mat-button
+              color="accent"
+              [routerLink]="['/details', person.id]"
+            >
+              szczegóły
+            </a>
+
+            <button
+              mat-button
+              color="warn"
+              (click)="delete(person.id)"
+            >
+              usuń
+            </button>
+          </span>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <h3>Brak danych</h3>
+      <p>Lista osób jest pusta</p>
+    </div>
+  </ng-template>
+</div>

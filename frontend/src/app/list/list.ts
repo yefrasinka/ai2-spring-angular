@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { PersonService } from '../person-service';
 import { Person } from '../person';
 
+import { MatButtonModule } from '@angular/material/button';
+
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatButtonModule],
   templateUrl: './list.html',
   styleUrls: ['./list.css']
 })

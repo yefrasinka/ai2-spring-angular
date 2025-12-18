@@ -5,11 +5,21 @@ import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { PersonService } from '../person-service';
 import { Person } from '../person';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-add-person',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [
+    FormsModule, 
+    RouterModule, 
+    MatButtonModule, 
+    MatFormFieldModule, 
+    MatInputModule,
+    MatCardModule],
   templateUrl: './add-person.html',
   styleUrl: './add-person.css'
 })

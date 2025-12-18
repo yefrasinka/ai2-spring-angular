@@ -4,10 +4,13 @@ import { RouterModule, ActivatedRoute } from '@angular/router';
 import { PersonService } from '../person-service';
 import { Person } from '../person';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatCardModule, MatButtonModule],
   templateUrl: './details.html',
   styleUrls: ['./details.css']
 })

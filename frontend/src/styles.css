@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+.app-header {
+  padding: 24px 32px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #b42353;
+}
+
+
+.page-container {
+  max-width: 800px;       
+  margin: 40px auto;    
+  padding: 0 20px;        
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 24px 0;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+.add {
+  margin-bottom: 20px;   
+}
+
+ul {
+  padding: 0;
+  margin-top: 20px;    
+}
+
+li {
+  padding: 12px 8px;     
+}
+
+.actions {
+  display: flex;
+  gap: 8px;              
+}

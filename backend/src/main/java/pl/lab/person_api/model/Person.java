@@ -20,8 +20,6 @@ public class Person {
     public Person() {
     }
 
-    // GETTERY I SETTERY ↓↓↓
-
     public Long getId() {
         return id;
     }
